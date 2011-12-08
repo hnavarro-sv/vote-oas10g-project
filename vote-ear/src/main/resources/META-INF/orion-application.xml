@@ -1,0 +1,30 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<orion-application xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:noNamespaceSchemaLocation="http://xmlns.oracle.com/oracleas/schema/orion-application-10_0.xsd"
+	default-data-source="jdbc/voteDS">
+
+	<data-sources path="./data-sources.xml" />
+	
+	<web-module id="vote" path="vote.war" />
+
+	<persistence path="persistence" />
+
+	<log>
+		<file path="vote.log" />
+	</log>
+
+	<imported-shared-libraries>
+
+		<remove-inherited name="*" />
+
+		<import-shared-library name="xalan.xml"
+			min-version="2.7.1" max-version="2.7.1" />
+		
+		<import-shared-library name="org.eclipse.persistence"
+			min-version="2.3.1" max-version="2.3.1" />
+
+		<import-shared-library name="oracle.jdbc" />
+
+	</imported-shared-libraries>
+
+</orion-application> 

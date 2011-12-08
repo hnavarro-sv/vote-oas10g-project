@@ -1,0 +1,15 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<orion-web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:noNamespaceSchemaLocation="http://xmlns.oracle.com/oracleas/schema/orion-web-10_0.xsd"
+	development="true" jsp-cache-directory="./persistence" jsp-cache-tlds="standard"
+	enable-jsp-dispatcher-shortcut="true"
+	simple-jsp-mapping="false" temporary-directory="./temp" servlet-webdir="/servlet/"
+	context-root="vote" schema-major-version="10"
+	schema-minor-version="0">
+	<web-app-class-loader search-local-classes-first="true"
+		include-war-manifest-class-path="false" />
+
+	<web-app>
+	</web-app>
+	
+</orion-web-app>

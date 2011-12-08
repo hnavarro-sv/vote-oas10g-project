@@ -1,0 +1,18 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<data-sources xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:noNamespaceSchemaLocation="http://xmlns.oracle.com/oracleas/schema/data-sources-10_1.xsd">
+
+    <connection-pool name="VOTE_Pool">
+        <connection-factory factory-class="oracle.jdbc.pool.OracleDataSource"
+                            user="vote" password="vote"
+                            url="jdbc:oracle:thin:@localhost:1521:xe"/>
+    </connection-pool>
+    
+    <managed-data-source name="VOTE_Managed" jndi-name="jdbc/voteDS"
+                         connection-pool-name="VOTE_Pool"/>
+    
+    <native-data-source name="VOTE_Native" jndi-name="jdbc/voteCoreDS"
+                        url="jdbc:oracle:thin:@localhost:1521:xe"
+                        user="vote" password="vote"
+                        data-source-class="oracle.jdbc.pool.OracleDataSource"/>
+</data-sources>

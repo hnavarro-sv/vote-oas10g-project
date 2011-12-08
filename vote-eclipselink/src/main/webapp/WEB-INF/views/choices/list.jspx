@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<div xmlns:jsp="http://java.sun.com/JSP/Page" xmlns:page="urn:jsptagdir:/WEB-INF/tags/form" xmlns:table="urn:jsptagdir:/WEB-INF/tags/form/fields" version="2.0">
+    <jsp:directive.page contentType="text/html;charset=UTF-8"/>
+    <jsp:output omit-xml-declaration="yes"/>
+    <page:list id="pl_com_springsource_vote_domain_Choice" items="${choices}" z="UfN5fYbNXDY/kV56fZuJ0nefuB8=">
+        <table:table data="${choices}" id="l_com_springsource_vote_domain_Choice" path="/choices" z="NMfq3VlDxBAir4y/axyN9RVahCU=">
+            <table:column id="c_com_springsource_vote_domain_Choice_namingChoice" property="namingChoice" z="u+qhHAMCfAmich6rejn9+vAV+eA="/>
+            <table:column id="c_com_springsource_vote_domain_Choice_description" property="description" z="SStVDPzdh30nlnBalnz1WUCrm74="/>
+        </table:table>
+    </page:list>
+</div>

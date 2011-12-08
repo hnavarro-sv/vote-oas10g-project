@@ -1,0 +1,29 @@
+project --topLevelPackage com.springsource.vote
+
+persistence setup --provider ECLIPSELINK --database ORACLE --userName vote --password vote
+database properties set --key database.url --value jdbc:oracle:thin:@localhost:1521:XE
+
+entity --class ~.domain.Choice --testAutomatically
+field string namingChoice --notNull --sizeMin 1 --sizeMax 30
+field string description --sizeMax 80
+web mvc setup
+web mvc scaffold ~.web.ChoiceController
+
+entity --class Vote --testAutomatically
+field reference choice --type Choice
+field string ip --notNull --sizeMin 7 --sizeMax 15
+field date registered --type java.util.Date --notNull --past
+web mvc scaffold ~.web.VoteController
+
+web mvc controller ~.web.PublicVoteController --preferredMapping /public
+
+web mvc language --code de
+web mvc language --code es
+
+logging setup --level WARN --package WEB
+
+security setup
+
+finder list --class com.springsource.vote.domain.Vote --depth 2 --filter reg,betw,IpEq
+
+logging setup --level INFO

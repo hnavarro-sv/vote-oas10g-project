@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<div xmlns:c="http://java.sun.com/jsp/jstl/core" xmlns:field="urn:jsptagdir:/WEB-INF/tags/form/fields" xmlns:form="urn:jsptagdir:/WEB-INF/tags/form" xmlns:jsp="http://java.sun.com/JSP/Page" xmlns:spring="http://www.springframework.org/tags" version="2.0">
+    <jsp:directive.page contentType="text/html;charset=UTF-8"/>
+    <jsp:output omit-xml-declaration="yes"/>
+    <form:create id="fc_com_springsource_vote_domain_Vote" modelAttribute="vote" path="/votes" render="${empty dependencies}" z="cp7QhDVcwkcDElkWoaQt0uDvxyQ=">
+        <field:select field="choice" id="c_com_springsource_vote_domain_Vote_choice" itemValue="id" items="${choices}" path="/choices" z="allb6E2L1ycNLovXrLurVPz/3gY="/>
+        <field:input field="ip" id="c_com_springsource_vote_domain_Vote_ip" max="15" min="7" required="true" z="t7Vsek2jPI77/UIFDUGU8a6IZjU="/>
+        <field:datetime dateTimePattern="${vote_registered_date_format}" field="registered" id="c_com_springsource_vote_domain_Vote_registered" past="true" required="true" z="D/KOZsV5IDLsjUQJsPtmNdE4CAk="/>
+    </form:create>
+    <form:dependency dependencies="${dependencies}" id="d_com_springsource_vote_domain_Vote" render="${not empty dependencies}" z="fW9YmZFVX0leCJ3lyFVQWilR7yM="/>
+</div>
